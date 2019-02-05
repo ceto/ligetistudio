@@ -1,1 +1,23 @@
 
+html {
+    font-family: $body-font-family;
+    color: $body-font-color;
+    background-color: $body-background-color;
+}
+// Set box-sizing globally to handle padding and border widths
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+img {
+    // Get rid of gap under images by making them display: inline-block; by default
+    display: inline-block;
+    vertical-align: middle;
+
+    // Grid defaults to get images and embeds to work properly
+    max-width: 100%;
+    height: auto;
+    -ms-interpolation-mode: bicubic;
+  }

@@ -1,0 +1,47 @@
+.refcard {
+    transition: all .7s cubic-bezier(.22, .61, .36, 1);
+	//transform: translateY(0) translateZ(0);
+
+	&:hover {
+        transform: translateY(-.666rem) translateZ(0);
+        .refcard__fig {
+            box-shadow: 0 .25rem .5rem 0 rgba(#000,.25);
+            
+        }
+        .refcard__title {
+            //text-decoration: underline;
+            //transform: translateX(.666rem) translateZ(0);
+        }
+	}
+}
+
+.refcard__fig {
+    margin:0;
+    padding:0;
+    box-shadow: 0 0 .5rem 0 rgba(#000,.25);
+    transition:inherit;
+}
+.refcard__title {
+    position: relative;
+    font-size:.875rem;
+    line-height: 1.2;
+    margin:.75em 5%;
+    //min-height: 2.5em;
+    font-weight: 400;
+    transition:inherit;
+
+    a {
+        text-decoration: none;
+        color:inherit;
+    }
+
+}
+
+.refcard__year {
+    position: absolute;
+    right:0;
+    top:.25em;
+    font-size:75%;
+    font-weight: 700;
+    display: none;
+}

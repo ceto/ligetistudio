@@ -1,0 +1,39 @@
+@import 'refcard';
+@import 'theref';
+
+.brand {
+    margin:0 auto 30%;
+    display: inline-block;
+    max-width: 10rem;
+    text-align: center;
+    font-size: 2rem;
+    img {
+       
+    }
+}
+.menu {
+    list-style:none;
+    margin:0;
+    padding:0;
+    font-size: 1.125rem;
+    > li {
+        margin:0;
+        padding:0;
+
+        a {
+            color:inherit;
+            display: inline-block;
+            padding:8% 0;
+            line-height: 1;
+            text-decoration: none;
+        }
+    
+    }
+    li:last-child {
+        margin-top: 30%;
+        padding-top:22%;
+        border-top:1px solid rgba($body-font-color,.25);
+        
+    }
+
+}
