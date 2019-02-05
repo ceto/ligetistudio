@@ -10,14 +10,14 @@ function title() {
     if (get_option('page_for_posts', true)) {
       return get_the_title(get_option('page_for_posts', true));
     } else {
-      return __('Latest Posts', 'sage');
+      return __('Latest Posts', 'ligeti');
     }
   } elseif (is_archive()) {
     return get_the_archive_title();
   } elseif (is_search()) {
-    return sprintf(__('Search Results for %s', 'sage'), get_search_query());
+    return sprintf(__('Search Results for %s', 'ligeti'), get_search_query());
   } elseif (is_404()) {
-    return __('Not Found', 'sage');
+    return __('Not Found', 'ligeti');
   } else {
     return get_the_title();
   }

@@ -1,20 +1,42 @@
 {
-  "name": "sage",
-  "homepage": "https://roots.io/sage/",
+  "name": "ligeti",
+  "homepage": "https://ligetidesign.hu/",
   "authors": [
-    "Ben Word <ben@benword.com>"
+    "Gabor Szabo <szabogabor@hydrogene.hu>"
   ],
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "bootstrap": "^4.0.0"
+    "foundation-sites": "^6.5.0",
+    "motion-ui": "^2.0.3",
+    "photoswipe": "^4.1.2",
+    "isotope-layout": "^3.0.6",
+    "imagesloaded": "^4.1.4"
   },
-    "overrides": {
-    "bootstrap": {
-      "main": [
-        "./scss/bootstrap.scss",
-        "./dist/js/bootstrap.bundle.js"
-      ]
-    }
+  "overrides": {
+    "motion-ui": {
+        "main": [
+          "dist/motion-ui.js",
+          "src/motion-ui.scss"
+        ]
+      },
+      "photoswipe": {
+        "main": [
+          "dist/photoswipe.js",
+          "dist/photoswipe-ui-default.js"
+        ]
+      },
+      "isotope-layout": {
+        "main": [
+          "dist/isotope.pkgd.js"
+        ],
+        "dependencies": {}
+      },
+      "imagesloaded": {
+        "main": [
+          "imagesloaded.pkgd.js"
+        ],
+        "dependencies": {}
+      }
   }
 }
