@@ -109,11 +109,7 @@ var cssTasks = function(filename) {
     })
     .pipe(concat, filename)
     .pipe(autoprefixer, {
-      browsers: [
-        'last 2 versions',
-        'android 4',
-        'opera 12'
-      ]
+        browsers: ['last 2 versions', 'ie >= 9', 'android >= 4.4', 'ios >= 7']
     })
     .pipe(cssNano, {
       safe: true
