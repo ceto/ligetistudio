@@ -32,7 +32,7 @@
     // }
     
 
-    function ligeti_modify_num_projects($query)
+function ligeti_modify_num_projects($query)
 {
     if ( ($query->is_main_query()) && ($query->is_archive('product') || $query->is_tax('prodcat') || $query->is_tax('project-attributes') ) && (!is_admin()) ) {
       $query->set('posts_per_page', -1);
@@ -42,3 +42,15 @@
     }
 }
 add_action('pre_get_posts', 'ligeti_modify_num_projects');
+
+function ligeti_front_page_query($query)
+{
+    if (  $query->is_main_query() && $query->is_home() && !is_admin() )   {
+        $query->set('post_type', array('product'));
+        $query->set('posts_per_page', -1);
+        $query->set('orderby', 'menu_order');
+        $query->set('order', 'ASC');
+        $query->set('post_status', array('publish' ));
+    }
+}
+add_action('pre_get_posts', 'ligeti_front_page_query');

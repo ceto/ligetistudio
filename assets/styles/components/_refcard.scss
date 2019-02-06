@@ -24,12 +24,14 @@
 .refcard__title {
     position: relative;
     font-size:.875rem;
-    line-height: 1.2;
+    line-height: 1.125;
     margin:.75em 5%;
     //min-height: 2.5em;
     font-weight: 400;
-    transition:inherit;
 
+    letter-spacing: 0;
+    text-transform: none;
+    transition:inherit;
     a {
         text-decoration: none;
         color:inherit;

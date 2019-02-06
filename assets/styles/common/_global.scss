@@ -3,6 +3,7 @@ html {
     font-family: $body-font-family;
     color: $body-font-color;
     background-color: $body-background-color;
+    line-height:1.4;
 }
 // Set box-sizing globally to handle padding and border widths
 *,
@@ -21,3 +22,18 @@ img {
     height: auto;
     -ms-interpolation-mode: bicubic;
   }
+
+  hr {
+    border:none;  
+    border-top: 1px solid rgba(#000,.125);;
+    margin:1rem 0 1rem;
+}
+
+a {
+    color: inherit;
+}
+
+h1, h2, h3 {
+    letter-spacing: .1125em;
+    text-transform:uppercase;
+}

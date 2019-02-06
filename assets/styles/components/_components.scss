@@ -1,21 +1,50 @@
 @import 'refcard';
 @import 'theref';
+@import 'photoswipemain';
+@import 'photoswipe';
 
 .brand {
-    margin:0 auto 30%;
+    margin:2vw auto 0;
     display: inline-block;
-    max-width: 10rem;
+    max-width: 5.5rem;
     text-align: center;
     font-size: 2rem;
     img {
-       
+        filter: brightness(80%) grayscale(100%);
+    }
+    @include breakpoint(1140px) {
+        margin:40% auto;
+        max-width: 8.5rem;
     }
 }
+.menutoggle {
+    display: block;
+    font-size: .875rem;
+    line-height: 1;
+    padding:.125em;
+    margin:1.75em auto 0;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .1125em;
+    position: absolute;
+    top:.4vw;
+    right:1rem;
+
+    @include breakpoint(1140px) {
+        display: none;
+    }
+
+}
 .menu {
+    display: none;
     list-style:none;
-    margin:0;
+    margin:2rem 0 2rem;
     padding:0;
-    font-size: 1.125rem;
+    font-size: 1rem;
+    text-transform: lowercase;
+    letter-spacing: .1125em;
     > li {
         margin:0;
         padding:0;
@@ -23,7 +52,7 @@
         a {
             color:inherit;
             display: inline-block;
-            padding:8% 0;
+            padding:10% 0;
             line-height: 1;
             text-decoration: none;
         }
@@ -36,4 +65,14 @@
         
     }
 
+
+    @include breakpoint(1140px) {
+        display: block;
+        margin-top:0;
+        font-size: 1.125rem;
+    }
+}
+
+.menu.is-active {
+    display: block;
 }
