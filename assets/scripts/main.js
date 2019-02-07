@@ -78,12 +78,15 @@
 
 
 document.getElementsByClassName('menutoggle')[0].addEventListener('click', function () {
-    if (document.getElementsByClassName('menu--main')[0].classList.contains('is-active')) {
-     document.getElementsByClassName('menu--main')[0].classList.remove('is-active');
+    if (document.getElementsByClassName('mobilenav')[0].classList.contains('is-active')) {
+     document.getElementsByClassName('mobilenav')[0].classList.remove('is-active');
     } else {
-        document.getElementsByClassName('menu--main')[0].classList.add('is-active');
+        document.getElementsByClassName('mobilenav')[0].classList.add('is-active');
     }
-  });
+});
+document.getElementsByClassName('menuclose')[0].addEventListener('click', function () {
+     document.getElementsByClassName('mobilenav')[0].classList.remove('is-active');
+});
 
 
   //photoswipe things

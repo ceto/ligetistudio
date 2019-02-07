@@ -77,7 +77,6 @@
 // @import "components/forms";
 // @import "components/grid";
 // @import "components/wp-classes";
-// @import "layouts/header";
 // @import "layouts/sidebar";
 // @import "layouts/footer";
 // @import "layouts/pages";
@@ -85,5 +84,6 @@
 // @import "layouts/tinymce";
 
 @import "layouts/layouts.scss"; 
+@import "layouts/mobileheader";
 @import "components/components.scss";
  

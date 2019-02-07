@@ -1,5 +1,4 @@
 .basegrid {
-    position: relative;
     margin:0 0;
     display: grid;
     grid-template-columns: 1fr;
@@ -9,18 +8,18 @@
     //min-height: 100vh;
     @include breakpoint(1140px) {
         grid-template-columns: 1fr 4fr;
-        margin:calc(2rem + 2vw) 0;
+        padding-top:calc(2rem + 2vw);
     }
     @include breakpoint(1440px) {
         grid-template-columns: 1fr 4fr 1fr;
     }
 }
 .banner {
-    //background-color: green;
+    display: none;
     padding: 0 1rem 0;
-    //text-align: center;
-    //display: flex;
+
     @include breakpoint(1140px) {
+        display: block;
     }
 }
 .main {
@@ -44,7 +43,7 @@
     grid-template-columns: 1fr;
     grid-column-gap: 2.5%;
     grid-row-gap: calc(.5vw + .25rem);
-    @include breakpoint(480px) {
+    @include breakpoint(410px) {
         grid-template-columns: repeat(2, 1fr);
     }
     @include breakpoint(720px) {

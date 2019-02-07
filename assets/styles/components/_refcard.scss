@@ -16,14 +16,16 @@
 }
 
 .refcard__fig {
-    margin:0;
+    margin:0 0;    
     padding:0;
     box-shadow: 0 0 .5rem 0 rgba(#000,.25);
     transition:inherit;
+
+
 }
 .refcard__title {
     position: relative;
-    font-size:.875rem;
+    font-size:.75rem;
     line-height: 1.125;
     margin:.75em 5%;
     //min-height: 2.5em;
@@ -32,6 +34,11 @@
     letter-spacing: 0;
     text-transform: none;
     transition:inherit;
+    
+    @include breakpoint(720px) {
+        font-size:.875rem;
+    }
+    
     a {
         text-decoration: none;
         color:inherit;

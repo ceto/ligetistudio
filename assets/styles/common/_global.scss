@@ -5,6 +5,10 @@ html {
     background-color: $body-background-color;
     line-height:1.4;
 }
+
+body {
+    background-color: $body-background-color;
+}
 // Set box-sizing globally to handle padding and border widths
 *,
 *::before,
