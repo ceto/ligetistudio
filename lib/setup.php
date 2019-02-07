@@ -101,6 +101,13 @@ function assets() {
     wp_enqueue_script('comment-reply');
   }
 
-  wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
+wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), [/*'jquery'*/], null, true);
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
+
+
+/*
+ * Remove the `wp-block-library.css` file from `wp_head()`
+ * @uses   wp_dequeue_style
+ */
+add_action( 'wp_enqueue_scripts', function() { wp_dequeue_style( 'wp-block-library' ); } );

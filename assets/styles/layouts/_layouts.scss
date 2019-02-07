@@ -15,6 +15,7 @@
     }
 }
 .banner {
+    position: relative;
     display: none;
     padding: 0 1rem 0;
 
@@ -22,6 +23,12 @@
         display: block;
     }
 }
+
+.banner__inner {
+    position: fixed;
+    transform: translateX(-50%);
+}
+
 .main {
     ///background-color: red;
     padding: 0 1rem;

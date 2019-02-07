@@ -8,6 +8,8 @@ html {
 
 body {
     background-color: $body-background-color;
+    // -webkit-font-smoothing: antialiased; // sass-lint:disable-line no-vendor-prefixes
+    // -moz-osx-font-smoothing: grayscale; // sass-lint:disable-line no-vendor-prefixes
 }
 // Set box-sizing globally to handle padding and border widths
 *,
