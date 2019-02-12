@@ -1,16 +1,20 @@
 .refcard {
-    transition: all .7s cubic-bezier(.22, .61, .36, 1);
+    position: relative;
+    overflow: hidden;
+
+    transition: all 1.2s cubic-bezier(.22, .61, .36, 1);
 	//transform: translateY(0) translateZ(0);
 
 	&:hover {
         //transform: translateY(-.666rem) translateZ(0);
         .refcard__fig {
             //box-shadow: 0 .25rem .5rem 0 rgba(#000,.25);
-            
+            //filter: grayscale(1);
+           //transform: scale(1.075); 
+           //opacity: .75;
         }
         .refcard__title {
-            //text-decoration: underline;
-            //transform: translateX(.666rem) translateZ(0);
+            opacity: 1;;
         }
 	}
 }
@@ -20,23 +24,35 @@
     padding:0;
     //box-shadow: 0 0 .5rem 0 rgba(#000,.25);
     transition:inherit;
-
+   
 
 }
 .refcard__title {
-    position: relative;
-    font-size:.75rem;
-    line-height: 1.125;
-    margin:.75em 5%;
-    //min-height: 2.5em;
-    font-weight: 400;
-
-    letter-spacing: 0;
+    position: absolute;
+    left:0;
+    top: 0;
+    right:0;
+    bottom:0;
+    opacity: 0;;
+    background-color: rgba(#fff,.875);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
     text-transform: none;
+    pointer-events: none;
+
+    font-size:.875rem;
+    font-weight: 700;
+    line-height: 1.333;
+    margin: 4%;
+    padding:1rem;
+
+    letter-spacing: .1em;
     transition:inherit;
     
     @include breakpoint(720px) {
-        font-size:.875rem;
+        //font-size:1.125rem;
     }
     
     a {
