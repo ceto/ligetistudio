@@ -18,21 +18,19 @@
 
                 <?php if(get_post_meta( get_the_ID(), '_cmb_photo_1', true ) !='')  : ?>
                     <section class="theref__gallery">
-                        <ul class="gallery psgallery">
+                        <section class="gallery psgallery">
                             <?php $k=0; while ( ($k<13) && (get_post_meta( get_the_ID(), '_cmb_photo_'.++$k, true ) !='')  ): ?>
-                            <li class="gallery__item">
                                 <?php
                                     $tsrc = wp_get_attachment_image_src( get_post_meta( get_the_ID(), '_cmb_photo_'.$k.'_id', true ), 'medium', false ) ;
-                                    $tlnk = wp_get_attachment_image_src( get_post_meta( get_the_ID(), '_cmb_photo_'.$k.'_id', true ), 'fullfree', false ) ;
+                                    $tlnk = wp_get_attachment_image_src( get_post_meta( get_the_ID(), '_cmb_photo_'.$k.'_id', true ), 'full', false ) ;
                                 ?>
                                 <figure class="gallery__fig" style="/*padding-bottom:<?= $tsrc[2]/$tsrc[1]*100?>%;*/" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                                     <a href="<?php echo $tlnk[0] ; ?>" data-size="<?= $tlnk['1'].'x'.$tlnk['2']; ?>">
                                         <img src="<?php echo $tsrc[0] ; ?>" />
                                     </a>
                                 </figure>
-                            </li>
                             <?php endwhile;	?>
-                        </ul><!-- .gallery -->
+                        </section><!-- .gallery -->
                     </section>    
 
 				    <?php endif; ?>

@@ -6,7 +6,7 @@
 
 
 
-        <header class="theref__header">
+        <!-- <header class="theref__header">
             <div class="theref__content">
                 <h1 class="theref__title"><?php the_title(); ?></h1>
                 <?php the_content(); ?>
@@ -17,7 +17,7 @@
                     Ligeti Ferenc
                 </cite>
             </blockquote>
-        </header>
+        </header> -->
     
     
 

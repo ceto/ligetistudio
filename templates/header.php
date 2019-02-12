@@ -3,6 +3,7 @@
         <a class="brand" href="<?= esc_url(home_url('/')); ?>">
                     <img src="<?= get_stylesheet_directory_uri().'/assets/images/ligetilogo.png'; ?>" alt="">
                     <span class="show-for-sr"><?php bloginfo('name'); ?></span>
+                    <span class="brand__desc"><?php bloginfo('description'); ?></span>
         </a>
         <nav class="mainnav">
             <?php

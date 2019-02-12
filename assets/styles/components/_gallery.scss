@@ -3,8 +3,8 @@
     margin:0;
     padding:0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr) ) ;
-    grid-gap:2rem;
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr) ) ;
+    grid-gap:1rem;
 }
 
 .gallery__item {
