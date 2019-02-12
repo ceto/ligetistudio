@@ -63,40 +63,16 @@
 .theref__gallery {
     //grid-column: 1 / span 1;
     grid-row: 2 / span 1; 
-    list-style: none;
-    margin:0;
-    padding:0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 3.5%;
-    align-items: start;
 
     @include breakpoint(480px) {
-        grid-template-columns: repeat(3, 1fr);
     }
     @include breakpoint(768px) {
         grid-row: 1 / span 1;    
     }
     @include breakpoint(1700px) {
-        grid-template-columns: repeat(4, 1fr);
     }
 }
 
-.theref__gallery__item {
-    margin:0;
-    padding:0 0 10.5%;
-}
-
-.refthumb {
-    position: relative;
-    margin:0;
-    padding:0;
-    padding-bottom:56.725%;
-    img {
-        position: absolute;
-
-    }
-}
 
 .minititle {
     border-top: 1px solid rgba(#000,.125);

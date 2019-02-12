@@ -14,19 +14,18 @@
                     <?php the_post_thumbnail('large21'); ?>
 				</figure>
 
-
-
 				<header class="theref__header">
 
                 <?php if(get_post_meta( get_the_ID(), '_cmb_photo_1', true ) !='')  : ?>
-                        <ul class="theref__gallery psgallery">
+                    <section class="theref__gallery">
+                        <ul class="gallery psgallery">
                             <?php $k=0; while ( ($k<13) && (get_post_meta( get_the_ID(), '_cmb_photo_'.++$k, true ) !='')  ): ?>
-                            <li class="theref__gallery__item">
+                            <li class="gallery__item">
                                 <?php
-                                    $tsrc = wp_get_attachment_image_src( get_post_meta( get_the_ID(), '_cmb_photo_'.$k.'_id', true ), 'medium43', false ) ;
+                                    $tsrc = wp_get_attachment_image_src( get_post_meta( get_the_ID(), '_cmb_photo_'.$k.'_id', true ), 'medium', false ) ;
                                     $tlnk = wp_get_attachment_image_src( get_post_meta( get_the_ID(), '_cmb_photo_'.$k.'_id', true ), 'fullfree', false ) ;
                                 ?>
-                                <figure class="refthumb" style="padding-bottom:<?= $tsrc[2]/$tsrc[1]*100?>%;" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <figure class="gallery__fig" style="/*padding-bottom:<?= $tsrc[2]/$tsrc[1]*100?>%;*/" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                                     <a href="<?php echo $tlnk[0] ; ?>" data-size="<?= $tlnk['1'].'x'.$tlnk['2']; ?>">
                                         <img src="<?php echo $tsrc[0] ; ?>" />
                                     </a>
@@ -34,6 +33,8 @@
                             </li>
                             <?php endwhile;	?>
                         </ul><!-- .gallery -->
+                    </section>    
+
 				    <?php endif; ?>
                     
                     <div class="theref__content">

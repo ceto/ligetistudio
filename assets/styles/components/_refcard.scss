@@ -3,9 +3,9 @@
 	//transform: translateY(0) translateZ(0);
 
 	&:hover {
-        transform: translateY(-.666rem) translateZ(0);
+        //transform: translateY(-.666rem) translateZ(0);
         .refcard__fig {
-            box-shadow: 0 .25rem .5rem 0 rgba(#000,.25);
+            //box-shadow: 0 .25rem .5rem 0 rgba(#000,.25);
             
         }
         .refcard__title {
@@ -18,7 +18,7 @@
 .refcard__fig {
     margin:0 0;    
     padding:0;
-    box-shadow: 0 0 .5rem 0 rgba(#000,.25);
+    //box-shadow: 0 0 .5rem 0 rgba(#000,.25);
     transition:inherit;
 
 
