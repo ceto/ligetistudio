@@ -5,24 +5,29 @@
 @import 'gallery';
 
 .brand {
-    margin:0 auto 1em;
-    display: inline-block;
-    max-width: 4.5em;
-
-    text-align: center;
-    font-size: calc(1.125rem + 1vw);
+    position: relative;
+    margin: 1.5rem auto 4rem;
+    display: block;
     text-decoration: none;
+    height:10rem;
+    width:10rem;
+    //background: red;
     img {
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform:translateX(-50%) translateY(-50%);
         filter: brightness(80%) grayscale(100%);
+        width:11rem;
+        max-width: none;
     }
-    @include breakpoint(1140px) {
-        margin:30% auto 20%;
-        //max-width: 10rem;
-    }
+
 }
 
 .brand__desc {
-    font-size: .333em;
+    position:absolute;
+    bottom:0;
+    font-size: .75em;
     font-weight: 700;
     opacity: .75;
     line-height: 1;
@@ -30,7 +35,7 @@
     display:inline-block;
     white-space: nowrap;
     letter-spacing: .1em;
-    transform: translateY(-1.25em);
+    //transform: translateY(-1.5em);
     // &:before {
     //     content:' • ';
     // }
@@ -52,16 +57,16 @@
         a {
             color:inherit;
             display: inline-block;
-            padding:10% 0;
+            padding:.666em 0;
             line-height: 1;
             text-decoration: none;
         }
     
     }
     li:last-child {
-        margin-top: 24%;
-        padding-top:16%;
-        border-top:1px solid rgba($body-font-color,.25);
+        margin-top: 1.3em;
+        padding-top:1.3em;
+        //border-top:1px solid rgba($body-font-color,.25);
         
     }
 }

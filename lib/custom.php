@@ -35,8 +35,8 @@
 function ligeti_modify_num_projects($query) {
     if ( ($query->is_main_query()) && ($query->is_archive('product') || $query->is_tax('prodcat') || $query->is_tax('project-attributes') ) && (!is_admin()) ) {
       $query->set('posts_per_page', -1);
-      $query->set('orderby', 'menu_order');
-      $query->set('order', 'ASC');
+      //$query->set('orderby', 'menu_order');
+      //$query->set('order', 'DESC');
       $query->set('post_status', array('publish' ));
     }
 }

@@ -3,6 +3,7 @@
     overflow: hidden;
 
     transition: all 1.2s cubic-bezier(.22, .61, .36, 1);
+    height:100%;
 	//transform: translateY(0) translateZ(0);
 
 	&:hover {
@@ -24,7 +25,11 @@
     padding:0;
     //box-shadow: 0 0 .5rem 0 rgba(#000,.25);
     transition:inherit;
-   
+    img {
+        width:100%;
+        height:100%;
+        object-fit: cover;     
+    }
 
 }
 .refcard__title {
