@@ -8,6 +8,18 @@
     @include breakpoint(1140px) {
         margin:0;
     }
+
+    .home & {
+        height:90vh;
+        @include breakpoint(1140px) {
+            height:85vh;
+        }
+        img {
+            object-fit: cover;
+            width: 100%;
+            height:100%;
+        }        
+    }
 }
 .theref__header {
     display:grid;

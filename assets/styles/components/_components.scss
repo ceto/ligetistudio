@@ -16,7 +16,7 @@
         filter: brightness(80%) grayscale(100%);
     }
     @include breakpoint(1140px) {
-        margin:30% auto 30%;
+        margin:30% auto 20%;
         //max-width: 10rem;
     }
 }
@@ -58,8 +58,8 @@
     
     }
     li:last-child {
-        margin-top: 30%;
-        padding-top:22%;
+        margin-top: 24%;
+        padding-top:16%;
         border-top:1px solid rgba($body-font-color,.25);
         
     }

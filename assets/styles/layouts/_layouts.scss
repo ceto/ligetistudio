@@ -12,7 +12,7 @@
     }
     @include breakpoint(1600px) {
 
-        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-columns: 1fr 3fr .25fr;
     }
     @include breakpoint(1900px) {
 
@@ -37,7 +37,7 @@
 .main {
     ///background-color: red;
     //padding: 0 1rem;
-    min-height: 100vh;
+    min-height: 90vh;
     justify-self: stretch;
 }
 
@@ -52,16 +52,16 @@
     margin:0;
     padding:0;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr) ) ;
     grid-gap: 4px;
     @include breakpoint(410px) {
-        grid-template-columns: repeat(2, 1fr);
+        //grid-template-columns: repeat(2, 1fr);
     }
-    @include breakpoint(720px) {
-        grid-template-columns: repeat(3, 1fr);
+    @include breakpoint(610px) {
+        grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr) ) ;
     }
     @include breakpoint(1900px) {
-        grid-template-columns: repeat(4, 1fr);
+        //grid-template-columns: repeat(4, 1fr);
     }
 }
 
@@ -75,13 +75,14 @@
     display: grid;
     //max-width:50rem;
     grid-gap:3.5%;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr) ) ;
     padding:0 1rem;
     @include breakpoint(720px) {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr) ) ;
+        //grid-template-columns: repeat(2, 1fr);
     }
     @include breakpoint(768px) {
-        grid-template-columns: repeat(3, 1fr);
+        //grid-template-columns: repeat(3, 1fr);
     }
     @include breakpoint(1140px) {
         padding:0 0;
