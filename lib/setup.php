@@ -51,7 +51,7 @@ function setup() {
 
   add_image_size( 'large21', 1600, 800, true );
 
-  //add_image_size('medium_large', 768, 9999, false);
+  add_image_size('medium_large', 1024, 9999, false);
 
   add_image_size( 'medium43', 480, 360, true );
   
