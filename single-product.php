@@ -86,7 +86,7 @@
                 </header>
 
 			
-
+                
 				<?php
 					$the_related=new WP_Query( array(
 											'post_type' => 'product',
@@ -98,15 +98,17 @@
 											) );
 					?>
 					<?php if ( $the_related->have_posts() ) :?>
-						<h3 class="minititle">Kapcsolódó munkák</h3>
-						<ul class="relprods">
-							<?php foreach( $the_related->posts as $posta ) : ?>
-					            <li>
-					              <a href="<?php the_permalink( $posta->ID ); ?>">
-					              	<?php echo get_the_title($posta->ID); ?></a>
-					            </li>
-					        <?php endforeach ?>
-						</ul>
+                        <footer class="theref__footer">
+                            <h3 class="minititle">Kapcsolódó munkák</h3>
+                            <ul class="relprods">
+                                <?php foreach( $the_related->posts as $posta ) : ?>
+                                    <li>
+                                    <a href="<?php the_permalink( $posta->ID ); ?>">
+                                        <?php echo get_the_title($posta->ID); ?></a>
+                                    </li>
+                                <?php endforeach ?>
+                            </ul>
+                        </footer>
 				<?php endif; ?>
 
 			</article><!-- #product-## -->

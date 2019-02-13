@@ -51,8 +51,8 @@
     letter-spacing: .1em;
     transition:inherit;
     
-    @include breakpoint(720px) {
-        //font-size:1.125rem;
+    @include breakpoint(640px) {
+        font-size:1rem;
     }
     
     a {
